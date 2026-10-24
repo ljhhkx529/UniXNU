@@ -15,15 +15,18 @@ The ports listed here are independent. Their maintainers own the repositories; t
 | [DroidVM guest (crosvm on Gunyah)](/devices/droidvm) | crosvm-gunyah | iPadOS 17 home screen; Metal widgets and icons; keychain and Bluetooth; virtio-net works | Droid-VM |
 | [QEMU virt](/devices/qemu) | QEMU virt | iPadOS 17 home screen and Settings; Metal on the Mac GPU with `--metal` | xVanTuring |
 | [Lenovo Xiaoxin Pad 2022 (tb128fu)](/devices/tb128fu) | SM6225 | iPadOS 17 home screen with touch; Metal frames presented by the GPU; Adreno 610 runs | xVanTuring |
+| [Galaxy Tab S7 FE Wi-Fi (SM-T733)](/devices/sm-t733) | SM7325 | iPadOS desktop, UFS and Data on hardware; GPU and Wi-Fi pending | RigoLigoRLC |
 | [OnePlus 10 Pro 5G (negroni)](/devices/negroni) | SM8450 | iOS 16.7.16 SpringBoard with touch; CPU-rendered; Wi-Fi pending | pawlickerr |
 | [Nothing Phone (2) (pong)](/devices/pong) | SM8475 | iOS 16.6.1 home screen with display and touch; UFS and GPU partial | Chengdong-Yu |
-| [Xiaomi 17 Pro (pandora)](/devices/pandora) | SM8850 | iOS 16.7.16 lock screen with touch and buttons; own loader, no UEFI chain | ShueiTsuki |
+| [Xiaomi 17 Pro (pandora)](/devices/pandora) | SM8850 | iOS 16.7.16 home screen with touch and buttons; GPU kernel driver runs command buffers, no rendering yet; own loader, no UEFI chain | ShueiTsuki |
+| [Xiaomi Mi 8 SE (sirius)](/devices/sirius) | SDM710 | XNU entry and platform expert via U-Boot UEFI; IOKit in progress | 57UU |
 | [Xiaomi 13 (fuxi)](/devices/fuxi) | SM8550 | Kernel links and prelinks; stage B archive chain near complete; no hardware run | matejkoo217, hanzi123-bilp |
 | [OnePlus 7 Pro (guacamole)](/devices/guacamole) | SM8150 | iOS 16.7.16 userland reached; GPU pending | wochgn |
 | [OnePlus Ace 5 (giulia)](/devices/giulia) | SM8650 | Hello/Setup with full display and touch; installation, GPU and Wi-Fi pending | jasper2863, tycykp |
 | [Xiaomi Mi 10 (umi)](/devices/umi) | SM8250 | iPadOS 17.7.11 Hello/Setup with touch; CPU display, UFS and persistent Data | reAAAq |
 | [Xiaomi MIX 2 (chiron)](/devices/chiron) | SDM835 | Minimal 4 KiB XNU and PID 1 heartbeat on hardware | to-mid |
 | [Xiaomi Pad 7 / POCO Pad X1 (uke)](/devices/uke) | SM7675 | Root mounted and launchd starts; display surface pending | Allenwdk |
+| [POCO X7 / Redmi Note 14 Pro 5G (malachite)](/devices/malachite) | MT6878 | UEFI works, UFS works, XNU rootfs loaded; USB, touch and the rest not implemented | ghidgdsr |
 | [Brave Ark tablet (braveark)](/devices/braveark) | SM8635 | XNU BSD init on 8 CPUs; iPadOS root in progress | tattwamashi |
 | [Xiaomi Pad 8 Pro (piano)](/devices/piano) | SM8750 | Kernel builds and prelinks in CI; not run on the tablet | code002-2 |
 | [Xiaomi 13 Pro (nuwa)](/devices/nuwa) | SM8550 | Source kernel builds; platform archives and prelink pending | wh1stl3 |
@@ -35,6 +38,7 @@ The ports listed here are independent. Their maintainers own the repositories; t
 | [Redmi K40 Pro (haydn)](/devices/haydn) | SM8350 | Firmware, payload and boot image built; haydn4 imported from guacamole | xiaomi-haydn-dev |
 | [Xiaomi Pad 5 (nabu)](/devices/nabu) | SM8150 | XNU reaches vfs_mountroot; root device next | Lux12138 |
 | [OnePlus 6T (fajita)](/devices/fajita) | SDM845 | XNU reaches root mount; no storage driver | johnpanos |
+| [Xiaomi Mi 8 (dipper)](/devices/dipper) | SDM845 | UEFI, menu and payload; XNU reaches BSD init, no root | hanyaa380 |
 | [Microsoft Surface Duo 2 (zeta)](/devices/zeta) | SM8350 | Kernel and root bring-up reach launchd exec; arm64e launchd stops | none24smu |
 | [OnePlus Ace 5 Pro (hummer)](/devices/hummer) | SM8750 | UEFI works; XNU SMP and boot checkpoints on the panel | 2426120557 |
 | [Xiaomi 10 Ultra (cas)](/devices/cas) | SM8250 | UEFI and UniXNU menu verified; DarwinBoot and XNU not tested | ht94911 |
@@ -46,14 +50,21 @@ The ports listed here are independent. Their maintainers own the repositories; t
 | [Xiaomi Pad 6 (pipa)](/devices/pipa) | SM8250 | Board and userdata values measured; not run on the tablet | xVanTuring |
 | [Galaxy Tab A7 10.4 (gta4l)](/devices/gta4l) | SM6115 | Board, ADT and firmware build; second repository builds a kernel in CI | NoNameBuilder, ilovemykedi |
 | [Redmi Note 10 Pro (sweet)](/devices/sweet) | SM7150 | Platform and loader bring-up; no bootable image | dipa-studio |
+| [Xiaomi Mi MIX 2S (polaris)](/devices/polaris) | SDM845 | Platform stage verified on hardware: firmware, UniXNU, DarwinBoot and the source kernel through BSD/IOKit; no root yet | luuu20309 |
 | [OnePlus 5 (cheeseburger)](/devices/cheeseburger) | MSM8998 | XNU entry bar observed; MMU and root unverified | DinnerABC |
 | [Redmi K20 Pro / Mi 9T Pro (raphael)](/devices/raphael) | SM8150 | New repository; kernel build not passing | penYo22 |
 | [Galaxy Z Fold3 (q2q)](/devices/q2q) | SM8350 | Source kernel build harness only | agcarbajo |
 | [Redmi K30 5G (picasso)](/devices/picasso) | SM7250 | Early skeleton; firmware not built | YinCQL |
 | [Redmi Note 9 (merlinx)](/devices/merlinx) | MT6768 | UEFI boots and custom menu works; storage init blocks UniXNU and XNU | Dracen-W |
+| [Xiaomi Mi Pad 4 LTE (clover)](/devices/clover) | SDM660 | Menu and entry bars; early XNU boot, no full boot | qine233 |
 | [Benesse TAB-A04-BR3 (a04br3)](/devices/a04br3) | MT8167 | Board, firmware, eMMC and GPT prepared; no hardware run | mouseos |
 | [Redmi 9A (dandelion)](/devices/dandelion) | MT6765 | Early bring-up; UEFI port in progress | licg89 |
 | [Xiaomi Mi 6 (sagit)](/devices/sagit) | MSM8998 | Device repository; status not documented | dmnakzkahziamnk-a11y |
+| [Redmi Note 12 Turbo / POCO F5 (marble)](/devices/marble) | SM7475 | Skeleton device repository; TODO values remain | Enmmmmn |
+| [Xiaomi Mi 10S (thyme)](/devices/thyme) | SM8250-AC | Board, kernel config and ADT scripts; no hardware result | tobyfox1640 |
+| [Redmi K80 Ultra (dali)](/devices/dali) | MT6991 | Single-core XNU early boot; root and userland out of scope | localhosts-A |
+| [ZTE Nubia Z60 Ultra (nx721j)](/devices/nx721j) | SM8750 | Kernel bring-up baseline; no firmware or payload | SangLuoCN |
+| [Unisoc UMS512 / T610YP](/devices/t610yp) | UMS512 | Board, kernel config and ADT; no hardware result | hxzbaka |
 | [Google Pixel 9 Pro XL (komodo)](/devices/komodo) | Tensor G4 | Board, defconfig and ADT; UEFI separate; no hardware run | Trijal08 |
 | [Xiaomi Mi 9 (cepheus)](/devices/cepheus) | SDM855 | Device repository and boot chain prepared; no hardware result | sxl47 |
 | [Xiaomi MIX Flip (ruyi)](/devices/ruyi) | SM8650 | Board and defconfig; no README or hardware result | ArnoDorian123 |
